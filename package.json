@@ -1,0 +1,11 @@
+{
+  "name": "mvc-express",
+  "version": "1.0.0",
+  "description": "Extremely simple MVC Boilerplate for NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Troshchenko, main.snivik@gmail.com",
+  "license": "ISC"
+}
