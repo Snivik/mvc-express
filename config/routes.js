@@ -31,10 +31,11 @@ module.exports = {
     'post /sample' : 'sample.sample.post',
 
     // routeAdapter will properly convert it, but controller bootstrap will skip it as it won't find the correct method
-    'delete /sample' : 'sample.sample.delete'
+    'delete /sample' : 'sample.sample.delete',
 
 
     // Other Demo Routes
+    'get /users' : 'users.index'
 
 };
 

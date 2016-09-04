@@ -1,5 +1,4 @@
 /* global imports */
-var express;
 try {
 
     express = require('express');

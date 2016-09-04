@@ -9,8 +9,9 @@ anything, I just needed some project I can start off to develop 1-week applicati
 or authentication.
 
 
-# Starting Application
+# Application
 
+## Starting
 Should be as simple as that
 
 ```
@@ -18,12 +19,31 @@ npm install
 node app --configuration=dev (Configuration param is not really required)
 ```
 
+## Lifecycle
+
+Current lifecycle follows the following model. You might want to refer it when developing bootstraps
+
+**Init**
+1. Get express
+2. Get requireall 
+
+**Application indexing
+3. Getting local map of bootstraps
+4. Assigning global `config`, `models`, `app`
+5. Loading bootstraps and sorting by order
+6. **Executing *before* bootstraps**
+    - Executing controllers
+    - Executing models
+7. Executing *system* bootstraps
+8. Executing the rest of the bootstraps
+9. Starting server
+
 
 
 # Folder Structure
 
-`assets` - Folder with assets. By default Express MVC packages JS, LESS, and CSS to minified CSS files and moves them to /public folder on launch.
-It uses grunt with bunch of extensions to prepare information for you
+`assets` - Folder with assets. By default Express MVC doesn't package anything on start. Typically it's a job of a packaging/compiling
+stack you choose. You can definitely make a bootstrap that will package/minify/... CSS/LESS/JS files for you, but that's optional.
 
 `public` - Public facing folder. Put images and fonts there
 
@@ -37,6 +57,7 @@ It uses grunt with bunch of extensions to prepare information for you
 
 `views` - Your views
 
+`src` - Source files for your JS/CSS code vefore compilation
 
 # What's included?
 

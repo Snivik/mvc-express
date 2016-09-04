@@ -6,7 +6,7 @@ var controllers = requireall('controllers');
 
 module.exports = {
   module_name: 'controllers binder',
-
+  order: 0,
   mapRoute: function(path, route){
 
     // Check if we are dealing with object
