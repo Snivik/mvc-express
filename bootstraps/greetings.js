@@ -5,6 +5,7 @@ module.exports = {
 
   before: true,
   order: 0,
+  module_name: 'Greetings',
 
   // Execute is the function
   execute: function(){

@@ -1,5 +1,6 @@
 # mvc-express
-An extremely simplified MVC Framework
+An extremely simplified MVC Framework in Node.JS. It's a skeleton for an MVC app of any complexity. 
+This version ships with few bolt-ons to demonstrate howto's, but generally you can start any project development extrmely easy
 
 # Idea / Purpose
 
@@ -14,14 +15,17 @@ Should be as simple as that
 
 ```
 npm install
-node app
+node app --configuration=dev (Configuration param is not really required)
 ```
 
 
 
 # Folder Structure
 
-`assets` - public facing assets folder. Anything put here available for public consumption
+`assets` - Folder with assets. By default Express MVC packages JS, LESS, and CSS to minified CSS files and moves them to /public folder on launch.
+It uses grunt with bunch of extensions to prepare information for you
+
+`public` - Public facing folder. Put images and fonts there
 
 `bootstrap` - Set of JS files that are going to be executed after/before controllers/models are initialized. Exists for introduction of side-seervices. Bootstrap is where you major cutomizations are happening
 
@@ -34,12 +38,20 @@ node app
 `views` - Your views
 
 
-# Provided Basics
+# What's included?
+
+By default, Express MVC includes routers, global config and global models. Model and routing are located in `bootstraps/system` folder,
+and you can totally change/remove them as well.
+
+
+# Extras (You can remove everything here)
 
 This section describes basic extensions provided on top of framework. If you remove all those extensions, server will still launch and work.
-Default providers are nothing but useful addition to basic boilerplate. You can safely remove all of them.
-**DISCLAIMER: If you are removing something not listed in this section that you didn't create, you're doing it at your own risk. Some files are required!**
-**DISCLAIMER 2: Sample controllers & models depend on each other, so make sure if you do remove them, you remove them all**
+Those extras provide some typical funcitonality you get in each MVC framework, so they are generally worth keeping.
+
+**NOTE: Be careful when removing extras. For example, if you remove grunt config, but don't touch grunt bootstrap, you are likely
+to run into an issue with application starting. E.g. use with caution**
+
 ## Bootstraps
 
 As an example on how to properly work with bootstraps inside this engine, there are several basic bootstraps:
@@ -48,11 +60,28 @@ As an example on how to properly work with bootstraps inside this engine, there 
 
 ## Models
 
-TODO
+All models are extra and are not needed
 
 ## Controllers
 
-TODO
+All controllers are provided for default functionality
 
 ## Config
 
+
+
+# Global variables
+
+Besides native express variables, here are some extras that might be useful
+
+`global.configuration` - Configuration for the current runtime
+
+`global.models` - All the models from Models folder
+
+`global.config` - All the configurations from config folder
+
+`global.controllers` - All controllers in controllers folder
+
+`global.app` - Express application
+
+`global.requireall` - Returns modules in folder as hashmap of objects
