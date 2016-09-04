@@ -71,17 +71,26 @@ Current lifecycle follows the following model. You might want to refer it when d
 
 **Init**
 1. Get express
+
 2. Get requireall 
 
 **Application indexing
 3. Getting local map of bootstraps
+
 4. Assigning global `config`, `models`, `app`
+
 5. Loading bootstraps and sorting by order
+
 6. **Executing *before* bootstraps**
+
     - Executing controllers
+    
     - Executing models
+    
 7. Executing *system* bootstraps
+
 8. Executing the rest of the bootstraps
+
 9. Starting server
 
 
