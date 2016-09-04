@@ -136,17 +136,21 @@ While HTML code will go before.
 Allows you to specify routes in key:pair manner, e.g. ` 'get /index/:param1/:param2' : 'controller.method'  `, where 
 `controller.method` can be burrowed deeper, if needed, like `controller.api.method`
 
-## Elasric Search
+## Elastic Search
 *Still Implementing*
 
 ElasticSearch DB adapter. Still under construction.
 
+# Extras by folders
 
 ## Bootstraps
 
 As an example on how to properly work with bootstraps inside this engine, there are several basic bootstraps:
 `greetings.js` - Simple welcome that will be printed when server is starting
 
+`ejs.js` - Adds ejsRender function to all responses
+
+`routeAdapter.js` - Converts ` 'get /index/:param1/:param2' : 'controller.method'  ` to usable route.
 
 ## Models
 
@@ -158,9 +162,10 @@ All controllers are provided for default functionality
 
 ## Config
 
+No configs are extra at this moment
 
 
-# Global variables
+# Global variables available inside Express MVC
 
 Besides native express variables, here are some extras that might be useful
 
