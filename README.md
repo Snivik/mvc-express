@@ -38,15 +38,20 @@ Also remove all routes from `config/routes.js`
 ## Removing EJS
 
 1. Remove `bootstraps/ejs.js`
+
 2. Remove `views/layout.ejs`
 
 
 ## Removing ElasticSearch
+
 1. Remove `bootstraps/elastic.js`
+
 2. Remove corresponding configurations from `config/configurations.js`, e.g. whole elasticsearch object from each environment.
 
 ## Removing smart routing
+
 1. Remove `bootstraps/routeAdapter.js`
+
 2. Remove all string routes from `config/routes.js`
 
 # Application
