@@ -70,11 +70,13 @@ node app
 Current lifecycle follows the following model. You might want to refer it when developing bootstraps
 
 **Init**
+
 1. Get express
 
 2. Get requireall 
 
-**Application indexing
+**Application indexing**
+
 3. Getting local map of bootstraps
 
 4. Assigning global `config`, `models`, `app`
@@ -113,11 +115,6 @@ stack you choose. You can definitely make a bootstrap that will package/minify/.
 `views` - Your views
 
 `src` - Source files for your JS/CSS code before compilation
-
-# What's included?
-
-By default, Express MVC includes routers, global config and global models. Model and routing are located in `bootstraps/system` folder,
-and you can totally change/remove them as well.
 
 
 # Extras (You can remove everything here)
